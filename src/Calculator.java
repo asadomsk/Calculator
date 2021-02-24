@@ -20,7 +20,7 @@ public class Calculator{
         }
         IOperationType operationType=operators[operation.getOperator()-'*'];
          //  result=operationTypeVisitor.visit(test,result,operation.getOperand());
-            operationType.accept(operationTypeVisitor,result,operation.getOperand());
+            result=operationType.accept(operationTypeVisitor,result,operation.getOperand());
             operation.setResult(result);
             operations.push(operation);
             return result;

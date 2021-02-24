@@ -1,6 +1,6 @@
 public class Subtraction implements IOperationType{
     @Override
-    public void accept(IOperationTypeVisitor operationTypeVisitor, float result, float operand) {
-        operationTypeVisitor.visit(this,result,operand );
+    public float accept(IOperationTypeVisitor operationTypeVisitor, float result, float operand) {
+        return operationTypeVisitor.visit(this,result,operand );
     }
 }
