@@ -7,7 +7,7 @@ public class OperationTypeVisitor implements IOperationTypeVisitor {
 
     @Override
     public float visit(Division division, float result, float operand) {
-        return result-operand;
+        return result/operand;
     }
 
     @Override
@@ -17,6 +17,6 @@ public class OperationTypeVisitor implements IOperationTypeVisitor {
 
     @Override
     public float visit(Subtraction subtraction, float result, float operand) {
-        return result/operand;
+        return result-operand;
     }
 }
